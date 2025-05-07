@@ -1,0 +1,22 @@
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!NamesPerYear"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="NamesPerYear">
+  <thead>
+    <tr>
+      <th>rok</th>
+      <th>Liczba</th>
+      <th>Imie</th>
+      <th>Plec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let namePerYear of NamesPerYear">
+      <td>{{ namePerYear.year }}</td>
+      <td>{{ namePerYear.count }}</td>
+      <td>{{ namePerYear.name }}</td>
+      <td>{{ namePerYear.sexName }}</td>
+    </tr>
+  </tbody>
+</table>
